@@ -1,0 +1,19 @@
+<cu-custom bgColor="bg-yellow" isBack="{{true}}">
+	<view slot="backText" catch:tap="onNavigateBack">返回</view>
+	<view slot="content">关于</view>
+</cu-custom>
+
+
+<view class='margin-xl bg-white padding-xl radius shadow-lg'>
+	<view class='text-center margin-bottom text-lg  text-grey'>关于闲匣</view>
+	<view class='text-content'>
+		<view class='margin-top-sm'>该项目是2021年微信小程序云开发大赛，队伍 闲了吧唧 的作品。</view>
+		<view class='margin-top-sm'>闲匣是一个针对高校大学生群体的p2p闲置二手物品的交易小程序。</view>
+		<view class='margin-top-sm'>在功能上，小程序对于卖家提供商品发布、在线问答、在线交流等功能；</view>
+		<view class='margin-top-sm'>对于买家提供商品收藏，在线问答、交流、评价等功能。</view>
+		<view class='margin-top-sm'>在交易模式上，小程序的交易模式为p2p的线下交易，这样就保证了交易的安全性和便捷性。</view>
+		<view class='margin-top-sm'>同时，团队会定期收集用户意见，并针对性的优化、改良小程序，或是加入新的功能，从而带给使用者较好的体验。</view>		
+    <view class='margin-top-sm'>版本号：1.1.3</view>
+		<view class='margin-top-sm'>最新更新时间：2021/5/31 18:30</view>
+	</view>
+</view>

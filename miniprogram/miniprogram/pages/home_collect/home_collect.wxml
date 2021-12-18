@@ -1,0 +1,27 @@
+<cu-custom bgColor="bg-yellow" isBack="{{true}}">
+	<view slot="backText" catch:tap="onNavigateBack">返回</view>
+	<view slot="content">我的收藏</view>
+</cu-custom>
+
+<view wx:if="{{CollectionList.length==0}}">
+	<van-empty description="最近30天内暂无收藏的商品" />
+</view>
+
+<view wx:for="{{CollectionList}}" wx:key="_id">
+			<van-card custom-class="commodity-card shadow-warp" thumb-mode="aspectFill" desc-class="text-cut"
+				title-class="text-cut" num="{{item.number}}" price="{{item.price_now}}" origin-price="{{item.price_origin}}"
+				desc="{{item.content}}" title="{{item.title}}" thumb="{{item.thumbnail_url[0]}}" data-id="{{item._id}}"
+				bind:tap="onEnterCommodityDetail">
+				<view slot="tags">
+					<view class="cu-tag bg-{{item.status==0?'green':(item.status==1?'red':'grey')}} round">
+						{{item.status==0?'正在出售':(item.status==1?'交易中':'已售罄')}}</view>
+				</view>
+			</van-card>
+</view>
+
+
+<!-- 加载更多 -->
+<view wx:if="{{CollectionList.length!=0}}">
+	<view class="cu-load margin-top {{isLoading?'loading':'over'}}"></view>
+</view>
+<van-dialog id="van-dialog" />

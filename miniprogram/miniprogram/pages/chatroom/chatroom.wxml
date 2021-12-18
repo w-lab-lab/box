@@ -1,0 +1,37 @@
+<cu-custom bgColor="bg-yellow" isBack="{{true}}">
+	<view slot="backText" catch:tap="onNavigateBack">返回</view>
+  <view wx:if="{{receiver_name}}" slot="content">与{{receiver_name}}的聊天</view>
+  <view wx:else slot="content">与...的聊天</view>
+</cu-custom>
+
+<view class="cu-chat">
+  <view class="padding flex flex-wrap justify-around align-center">
+			<button class="cu-btn round  text-center bg-yellow" bindtap="LoadMoreMsg">点击加载更多</button>
+  </view>
+  <view wx:for="{{chatMessage}}" wx:key="key">
+    <view wx:if="{{item.sender_id == sender_id}}" class="cu-item self">
+      <view class="main">
+       <view class="content bg-green shadow">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view class="cu-avatar radius" style="background-image:url({{sender_avatar}});"></view>
+      <view class="date">{{item.send_time}}</view>
+    </view>
+    <view wx:else class="cu-item">
+      <view class="cu-avatar radius" style="background-image:url({{receiver_avatar}});"></view>
+      <view class="main">
+        <view class="content shadow">
+          <text>{{item.content}}</text>
+        </view>
+      </view>
+      <view class="date">{{item.send_time}}</view>
+    </view>
+  </view>
+  <view class="null"></view>
+</view>
+
+<view class="cu-bar foot input {{InputBottom!=0?'cur':''}}" style="bottom:{{InputBottom}}px">
+  <input class="solid-bottom" bindinput="ContentInput" bindblur="InputBlur" adjust-position="{{true}}" focus="{{false}}" maxlength="300" cursor-spacing="10" value="{{inputContent}}"></input>
+  <button class="cu-btn bg-yellow shadow" bindtap="sendMessage">发送</button>
+</view>

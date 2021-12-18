@@ -1,0 +1,5 @@
+/* pages/chatroom/chatroom.wxss */
+.null {
+  width: 100%;
+  height: 50px;
+}

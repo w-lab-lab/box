@@ -1,0 +1,75 @@
+<view class="homePage">
+	<view class="UCenter-bg">
+		<image src="{{userAvatarUrl}}" class="png round" mode="widthFix" bindtap="onEnterHomeUserInfo"></image>
+		<view class="text-xl margin-top text-black" bindtap="onEnterHomeUserInfo">{{userName}}
+		</view>
+		<view class="margin-top-sm" bindtap="onEnterHomeUserInfo">
+			<text class="text-black">{{universityName}}</text>
+		</view>
+	</view>
+
+	<view class="flexbutton2" style="display: flex;flex-direction:row;justify-content:space-around">
+		<image class="homeimages" mode="heightFix" bindtap="onEnterHomeCollect"
+		src="cloud://cloud1-6g3tf8v64f9a5fc3.636c-cloud1-6g3tf8v64f9a5fc3-1305813038/homepic/1.png"></image>
+		<image wx:if="{{!newMsg}}" class="homeimages" mode="heightFix" bindtap="onEnterChatList"
+		src="cloud://cloud1-6g3tf8v64f9a5fc3.636c-cloud1-6g3tf8v64f9a5fc3-1305813038/homepic/2.png"></image>
+		<image wx:if="{{newMsg}}" class="homeimages" mode="heightFix" bindtap="onEnterChatList"
+		src="cloud://cloud1-6g3tf8v64f9a5fc3.636c-cloud1-6g3tf8v64f9a5fc3-1305813038/homepic/8.png"></image>
+		<image class="homeimages" mode="heightFix" bindtap="onEnterHomeRelease" 
+		src="cloud://cloud1-6g3tf8v64f9a5fc3.636c-cloud1-6g3tf8v64f9a5fc3-1305813038/homepic/3.png"></image>
+		<image class="homeimages" mode="heightFix" bindtap="onEnterHomeTransaction"
+		src="cloud://cloud1-6g3tf8v64f9a5fc3.636c-cloud1-6g3tf8v64f9a5fc3-1305813038/homepic/4.png"></image>
+	</view>
+
+	<view class="flexbutton" style="display: flex;flex-direction:column;justify-content:space-between">
+		<button class="homebutton" bindtap="onAuthReceiveMsg">
+			<image class="homeimages2" mode="aspectFill" 
+			src="cloud://cloud1-6g3tf8v64f9a5fc3.636c-cloud1-6g3tf8v64f9a5fc3-1305813038/homepic/5.png"></image>
+		</button>
+		<button class="homebutton" bindtap="onEnterHomeAbout">
+			<image class="homeimages2" mode="aspectFill" 
+			src="cloud://cloud1-6g3tf8v64f9a5fc3.636c-cloud1-6g3tf8v64f9a5fc3-1305813038/homepic/6.png"></image>
+		</button>
+		<button class="homebutton" open-type="feedback"> 
+			<image class="homeimages2" mode="aspectFill" 
+			src="cloud://cloud1-6g3tf8v64f9a5fc3.636c-cloud1-6g3tf8v64f9a5fc3-1305813038/homepic/7.png"></image>
+		</button>
+	</view>
+
+	<view class="null"></view>
+</view>
+
+
+<view class="hline"></view>
+
+<view class="cu-bar tabbar bg-white bar-wrapper">
+	<view class="action {{pageIndex==0?'text-orange':'text-grey'}}" bind:tap="onCommodityListTab">
+		<view class="cuIcon-homefill"></view> 首页
+	</view>
+
+	<view class="action text-gray add-action" bind:tap="onCommodityReleaseTab">
+		<button class="cu-btn cuIcon-add bg-yellow shadow"></button>
+		发布
+	</view>
+
+	<view class="action {{pageIndex==1?'text-orange':'text-grey'}}" bind:tap="onHomeTab">
+		<view class="cuIcon-my">
+			<!-- <view class="cu-tag badge"></view> -->
+		</view>
+		我的
+	</view>
+</view>
+
+<view class="cu-modal bottom-modal {{showLoginPopup?'show':''}}">
+	<view class="cu-dialog" catchtap>
+		<view class="cu-bar bg-white">
+			<view class="action text-blue"></view>
+			<view class="action text-green" catch:tap="onCancelLoginPopup">取消</view>
+		</view>
+		<view class="padding">
+			<button class="cu-btn block bg-green margin-tb-sm lg" bindtap="onAuth">注册后可进行更多操作</button>
+		</view>
+	</view>
+</view>
+
+<van-dialog id="van-dialog" />

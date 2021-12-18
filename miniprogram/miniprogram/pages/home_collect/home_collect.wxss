@@ -1,0 +1,18 @@
+/* miniprogram/pages/home_release/home_release.wxss */
+
+.van-swipe-cell__right {
+  display: inline-block;
+  width: 65px;
+  height: 44px;
+  font-size: 15px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  background-color: #f44;
+}
+
+.commodity-card{
+  background-color: #ffffff !important;
+  border-radius: 20rpx;
+  margin:3px 6px;
+}

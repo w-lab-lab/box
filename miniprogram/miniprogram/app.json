@@ -1,0 +1,40 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/commodity_list/commodity_list",
+    "pages/index_register/index_register",
+    "pages/home/home",
+    "pages/transaction_detail/transaction_detail",
+    "pages/commodity_transaction/commodity_transaction",
+    "pages/commodity_detail/commodity_detail",
+    "pages/commodity_change_detail/commodity_change_detail",
+    "pages/commodity_search/commodity_search",
+    "pages/commodity_release/commodity_release",
+    "pages/index_auth/index_auth",
+    "pages/home_transaction/home_transaction",
+    "pages/home_release/home_release",
+    "pages/home_user_info/home_user_info",
+    "pages/question_detail/question_detail",
+    "pages/home_about/home_about",
+    "pages/home_collect/home_collect",
+    "pages/chatlist/chatlist",
+    "pages/chatroom/chatroom"
+  ],
+  "window": {
+    "backgroundColor": "#F6F6F6",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#F6F6F6",
+    "navigationBarTitleText": "加载中",
+    "navigationBarTextStyle": "black",
+    "navigationStyle": "custom"
+  },
+  "usingComponents": {
+    "cu-custom": "/colorui/components/cu-custom"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于学校认证"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

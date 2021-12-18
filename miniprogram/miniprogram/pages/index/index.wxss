@@ -1,0 +1,31 @@
+/* miniprogram/pages/index/index.wxss */
+page{
+  background-image: url(https://636c-cloud1-6g3tf8v64f9a5fc3-1305813038.tcb.qcloud.la/cloudpic/indexpic.png?sign=1789de9bc3a5b2780798b7bc2a71f019&t=1621148991);
+  background-repeat:no-repeat;
+  background-size:100% 100%;
+  -moz-background-size:100% 100%;
+}
+
+.hd {
+  position: absolute;
+  top: 400rpx;
+  left: 50%;
+  width: 1000rpx;
+  margin-left: -500rpx;
+  height: 200rpx;
+  transition: all .35s ease;
+}
+
+.logo {
+  display: block;
+  overflow: hidden;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  bottom: 150rpx;
+  width: 160rpx;
+  height: 160rpx;
+  margin-left: -80rpx;
+  border-radius: 160rpx;
+  opacity: .95;
+}
